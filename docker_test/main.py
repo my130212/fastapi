@@ -1,12 +1,8 @@
 from typing import Optional
 import uvicorn
 from fastapi import FastAPI
-from tutorial import app03,app04
 
 app = FastAPI()
-
-app.include_router(app03, prefix='/chapter03', tags=['第三章，请求参数与验证'])
-app.include_router(app04, prefix='/chapter04', tags=['第三章，请求参数与验证'])
 
 @app.get("/")
 def read_root():
